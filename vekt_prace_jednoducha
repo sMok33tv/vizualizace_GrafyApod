@@ -3,14 +3,14 @@ import numpy as np
 A = np.ones(5)
 B = 2 * np.ones(5)
 
-suma = A + B
+vysledek = A + B
 rozdil = A - B
 vektorovy_soucin = A * B
 podil = A / B
 
-print("Vektor A:", A)
-print("Vektor B:", B)
-print("Součet A + B:", suma)
-print("Rozdíl A - B:", rozdil)
-print("Vektorový součin A * B:", vektorovy_soucin)
-print("Podíl A / B:", podil)
+print(f"Vektor A = {A}")
+print(f"Vektor B = {B}")
+print(f"Součet = {vysledek}")
+print(f"Rozdíl = {rozdil}")
+print(f"Součin = {vektorovy_soucin}")
+print(f"Podíl = {podil}")
