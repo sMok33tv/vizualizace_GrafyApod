@@ -1,14 +1,15 @@
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
 
 image = Image.open('opice.jpg')
-image_matrix = np.array(image)
-image_vector = image_matrix.flatten()
+image_matrixX = np.array(image)
+image_vector = image_matrixX.flatten()
+zmena_cmap = ListedColormap(['red', 'green', 'blue', 'orange', 'purple'])
 
-# Vizualizace
-plt.figure(figsize=(10, 10))
-plt.imshow(image_vector.reshape(image_matrix.shape), cmap='gray')
+plt.figure(figsize=(8, 8))  
+plt.imshow(image_vector.reshape(image_matrixX.shape), cmap=zmena_cmap) 
 plt.colorbar()
 plt.title('Opica')
 plt.show()
