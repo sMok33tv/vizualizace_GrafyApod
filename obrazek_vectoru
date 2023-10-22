@@ -1,0 +1,14 @@
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
+
+image = Image.open('opice.jpg')
+image_matrix = np.array(image)
+image_vector = image_matrix.flatten()
+
+# Vizualizace
+plt.figure(figsize=(10, 10))
+plt.imshow(image_vector.reshape(image_matrix.shape), cmap='gray')
+plt.colorbar()
+plt.title('Opica')
+plt.show()
