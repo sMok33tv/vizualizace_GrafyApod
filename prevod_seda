@@ -1,0 +1,11 @@
+import numpy as np
+from PIL import Image
+
+image = Image.open('opice.jpg')
+image_array = np.array(image)
+
+gray_image = np.dot(image_array[..., :3], [0.2989, 0.5870, 0.1140])
+gray_image = gray_image.astype('uint8')
+gray_image = Image.fromarray(gray_image)
+
+gray_image.show()
